@@ -1,0 +1,19 @@
+
+server:
+  port: 8081
+spring:
+  redis:
+    port: 6379
+    password: cx971112
+    host: 120.27.241.221
+    lettuce:
+      pool:
+        max-active: 8 #最大活跃数
+        max-idle: 8
+        min-idle: 0
+        max-wait: 1000
+      shutdown-timeout: 100
+  data:
+    mongodb:
+      database: 0
+
