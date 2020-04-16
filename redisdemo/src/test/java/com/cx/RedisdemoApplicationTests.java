@@ -26,6 +26,6 @@ class RedisdemoApplicationTests {
 	@Test
 	void t2()
 	{
-		userService.selectById("1003");
+		userService.selectById("1004");
 	}
 }
