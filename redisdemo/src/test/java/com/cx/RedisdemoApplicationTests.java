@@ -22,4 +22,10 @@ class RedisdemoApplicationTests {
 		String result = userService.getString("testRedis");
 		System.out.println(result);
 	}
+
+	@Test
+	void t2()
+	{
+		userService.selectById("1003");
+	}
 }
