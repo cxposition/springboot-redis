@@ -54,7 +54,7 @@ public class ListCacheServiceImpl {
             ar.setId("1000"+i);
             ar.setTitle("文章标题"+i);
             ar.setContent("文章内容数据"+i);
-            ar.setClickNum(new Random().nextInt()+1);
+            ar.setClickNum((new Random().nextLong()+1));
             ar.setAuthor("小霞霞"+i);
             ar.setCreateDate(dataTime);
             list.add(ar);

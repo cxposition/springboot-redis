@@ -20,7 +20,7 @@ public class Article implements Serializable {
     /**创建日期*/
     private String createDate;
     /**点击量 or 阅读量*/
-    private Integer clickNum;
+    private Long clickNum;
 
     public String getId() {
         return id;
@@ -62,11 +62,30 @@ public class Article implements Serializable {
         this.createDate = createDate;
     }
 
-    public Integer getClickNum() {
+    public Long getClickNum() {
         return clickNum;
     }
 
-    public void setClickNum(Integer clickNum) {
+    public void setClickNum(Long clickNum) {
         this.clickNum = clickNum;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"id\":\"")
+                .append(id).append('\"');
+        sb.append(",\"title\":\"")
+                .append(title).append('\"');
+        sb.append(",\"content\":\"")
+                .append(content).append('\"');
+        sb.append(",\"author\":\"")
+                .append(author).append('\"');
+        sb.append(",\"createDate\":\"")
+                .append(createDate).append('\"');
+        sb.append(",\"clickNum\":")
+                .append(clickNum);
+        sb.append('}');
+        return sb.toString();
     }
 }
