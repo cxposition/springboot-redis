@@ -42,7 +42,7 @@ public class UserServiceImpl {
         {
             log.info("----->Redis中查出来的！");
             //return (String) redisTemplate.opsForValue().get(key);
-            //修改优化redis模板
+            /**修改优化redis模板*/
             return string.get(key);
         }else {
             String val = "redisTemplate模板学习lettuce客户端";

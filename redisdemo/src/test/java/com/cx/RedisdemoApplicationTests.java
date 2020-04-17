@@ -1,5 +1,6 @@
 package com.cx;
 
+import com.cx.service.impl.ListCacheServiceImpl;
 import com.cx.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,9 @@ class RedisdemoApplicationTests {
 
 	@Autowired
 	private UserServiceImpl userService;
+
+	@Autowired
+	private ListCacheServiceImpl listCacheService;
 
 	@Test
 	void contextLoads() {
@@ -27,5 +31,11 @@ class RedisdemoApplicationTests {
 	void t2()
 	{
 		userService.selectById("1004");
+	}
+
+	@Test
+	void t3()
+	{
+		listCacheService.initArticle();
 	}
 }
