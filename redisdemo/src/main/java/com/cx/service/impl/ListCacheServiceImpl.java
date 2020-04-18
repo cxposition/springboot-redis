@@ -75,4 +75,17 @@ public class ListCacheServiceImpl {
         return opsForList.range(key,0,4);
     }
 
+    /**
+     * @description 添加文章
+     *
+     * @param
+     * @return
+     */
+    public long insertArticle(Article article)
+    {
+        log.info("插入数据存入redis");
+        String key = "article:top5";
+        return opsForList.leftPush(key,article);
+    }
+
 }

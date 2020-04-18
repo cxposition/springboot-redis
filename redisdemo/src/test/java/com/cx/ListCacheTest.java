@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,5 +29,17 @@ public class ListCacheTest {
         {
             System.out.println(a.toString());
         }
+    }
+
+    @Test
+    void t2()
+    {
+        Article article = new Article();
+        article.setTitle("纽约新闻！");
+        article.setAuthor("小霞霞");
+        article.setId("10006");
+        article.setCreateDate(null);
+        article.setClickNum((long) 1000);
+        listCacheService.insertArticle(article);
     }
 }
